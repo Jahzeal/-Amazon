@@ -31,6 +31,7 @@ export function removeFromCart(productId){
   cart.forEach((cartItem)=>{
     if(cartItem.productId !== productId){
       newCart.push(cartItem);
+
     }
   });
 
