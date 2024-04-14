@@ -14,13 +14,13 @@ export function renderOrderSummary(){
     const productId = cartItem.productId;
     
     const matchingProduct = getProduct(productId);
-    const deliveryOptionId = cartItem.deliveryOptionsId;
+    const deliveryOptionId = cartItem.deliveryOptionId;
 
-    const deliveryOption = getDeliveryOption(deliveryOptionId);
+    const deliveryOptions = getDeliveryOption(deliveryOptionId);
 
     const today = dayjs();
       const deliveryDate = today.add(
-        deliveryOption.deliveryDays,
+        deliveryOptions.deliveryDays,
         'days'
       );
       const dateString = deliveryDate.format(
